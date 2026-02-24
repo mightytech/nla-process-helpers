@@ -71,6 +71,26 @@ disable-model-invocation: true
 Read and follow `../nla-process-helpers/app/steelman.md`.
 ```
 
+### /devils-advocate
+
+**Purpose:** Adversarial testing — systematically find weaknesses in a plan or proposal before committing.
+
+**Wrapper location:** `.claude/skills/devils-advocate/SKILL.md`
+
+**What the wrapper should do:** Point to the process helpers' skill logic at
+`../nla-process-helpers/app/devils-advocate.md`. Same thin wrapper pattern as
+`/unpack`.
+
+**Reference implementation:**
+```yaml
+---
+name: devils-advocate
+description: Adversarial testing — systematically find weaknesses in a plan or proposal before committing. Use when an approach needs stress-testing.
+disable-model-invocation: true
+---
+Read and follow `../nla-process-helpers/app/devils-advocate.md`.
+```
+
 ## Wrapper Pattern
 
 Skills follow the NLA extension pattern: thin wrappers in the NLA that delegate to

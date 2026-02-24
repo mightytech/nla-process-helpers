@@ -23,6 +23,10 @@ helpers extension. Specifically:
   paths deserve a fair hearing, `/steelman` builds the strongest possible case
   for alternatives — genuine advocacy, not balanced overviews.
 
+- **It can play devil's advocate.** When a plan or proposal needs stress-testing,
+  `/devils-advocate` systematically finds weaknesses — specific, actionable issues
+  surfaced before reality surfaces them.
+
 - **Techniques layer on active context.** Invoking a process helper doesn't interrupt
   or replace whatever mode is active — thinking, maintenance, domain work. It adds
   conversation structure on top.
@@ -42,6 +46,8 @@ The NLA's available skills section should include:
 - `/steelman` — Structured advocacy — build the strongest case for alternatives
   before committing to a direction. Use when a decision is forming and the unchosen
   paths deserve a fair hearing.
+- `/devils-advocate` — Adversarial testing — systematically find weaknesses in a
+  plan or proposal before committing. Use when an approach needs stress-testing.
 
 These are process helper skills, distinct from framework skills like `/maintain` or
 `/startup`.

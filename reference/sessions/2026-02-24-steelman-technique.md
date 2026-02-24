@@ -1,11 +1,11 @@
-# Maintenance Session: Steelman Technique
+# Maintenance Session: Steelman and Devil's Advocate Techniques
 
 **Date:** 2026-02-24
 **Status:** Complete
 
 ## Intent
 
-Add a third facilitation technique to the process helpers package: `/steelman` — structured advocacy that builds the strongest case for alternatives before committing to a direction.
+Add two complementary facilitation techniques: `/steelman` (structured advocacy — build up alternatives) and `/devils-advocate` (adversarial testing — tear down the plan). These form a natural pair producing different information about the same decision.
 
 ## Brainstorm Context
 
@@ -39,6 +39,12 @@ Used `/brainstorm-cluster` to generate candidate techniques. The brainstorm conv
 - Added steelman to `README.md` (techniques table, usage, manual setup, directory tree)
 - Added "Steelman and the Advocacy Model" section to `reference/design-rationale.md`
 - Added friction log entry about brainstorm-cluster early convergence (positive)
+- Created `app/devils-advocate.md` — technique document with attack lenses (logical, practical, contextual, temporal/pre-mortem)
+- Created `.claude/skills/devils-advocate/SKILL.md` — thin wrapper delegating to app doc
+- Added `/devils-advocate` to all integration points (CLAUDE.md, overview, install intents, README, config-spec)
+- Added "Devil's Advocate and Pre-Mortem Integration" section to `reference/design-rationale.md`
+- Broadened `app/shared/values.md` — replaced unpack-specific language ("threads," "bundle") with technique-neutral language
+- Refactored `app/config-spec.md` tracing descriptions — switched from exhaustive enumeration to "e.g." framing so new techniques don't require config-spec updates
 
 ## Decisions Made
 
@@ -46,7 +52,11 @@ Used `/brainstorm-cluster` to generate candidate techniques. The brainstorm conv
 - **No participation modes** — Inherently AI-led. The human already has their direction; they need the AI to build the case they can't/won't build themselves.
 - **Three-step method (identify, build, present)** — Simpler than siblings. No phased process because the technique is fundamentally one action: construct and deliver the strongest alternative case.
 - **Any outcome is success** — Confirmation, change of mind, and "need to think more" are all the technique working.
-- **Steelman vs. devil's advocate are distinct** — Build up vs. tear down. Complementary techniques producing different information. Devil's advocate may come later.
+- **Steelman vs. devil's advocate are distinct** — Build up vs. tear down. Complementary techniques producing different information.
+- **Pre-mortem integrated as a lens** — Rather than a separate technique, pre-mortem is the temporal attack angle within devil's advocate. It enriches without diluting.
+- **Named lenses as examples, not checklist** — Logical, practical, contextual, temporal demonstrate the depth expected while preserving AI judgment about which angles matter.
+- **Findings must be separable** — Each weakness is a distinct issue, naturally composable with `/unpack` for working through fixes.
+- **Config-spec tracing: "e.g." not exhaustive** — Tracing descriptions use illustrative examples rather than enumerating every technique's concepts. Scales without maintenance. If tracing becomes a real feature, move technique-specific tracing guidance into each technique doc (approach A).
 
 ## What Didn't Work
 
@@ -54,8 +64,8 @@ Used `/brainstorm-cluster` to generate candidate techniques. The brainstorm conv
 
 ## State at Close
 
-`/steelman` is complete and integrated. All cross-references resolve. Architecture review found and fixed two issues (config-spec tracing language, overview wrapper diagram). Debrief caught one language-drift issue in the technique doc itself.
+Both `/steelman` and `/devils-advocate` are complete and integrated. Structural validation passed clean. Architecture review found and fixed one language breadth issue (values.md). Debrief surfaced a config-spec scaling concern — resolved by switching tracing descriptions to "e.g." framing.
 
-The brainstorm idea list (15 candidates) is preserved above for future technique selection. Devil's advocate is the most natural next candidate given its complementary relationship to steelman.
+The brainstorm idea list (15 candidates, 2 now implemented, 1 absorbed into devil's advocate as a lens) is preserved above. Pre-mortem is covered by devil's advocate's temporal lens — no separate technique needed.
 
-Friction log has one positive entry about brainstorm-cluster early convergence. No pending items.
+Friction log has one positive entry (brainstorm-cluster early convergence). No pending items.

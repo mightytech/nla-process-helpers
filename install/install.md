@@ -11,8 +11,8 @@ The process helpers package provides facilitation techniques for NLA projects â€
 conversation-shaping skills that layer on top of whatever work is already active.
 Currently provides `/unpack` for structuring complex conversations into sequential
 threads, `/brainstorm-cluster` for structured brainstorming with flexible
-participation modes, and `/steelman` for building the strongest case for
-alternatives before committing to a direction.
+participation modes, `/steelman` for building the strongest case for alternatives,
+and `/devils-advocate` for stress-testing plans and proposals.
 
 ## Prerequisites
 

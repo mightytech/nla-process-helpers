@@ -13,6 +13,7 @@ Current state of the process helpers package.
 | `/unpack` | Ready | Moved from framework core. First facilitation technique. |
 | `/brainstorm-cluster` | Ready | Structured brainstorming with participation modes. Second technique. |
 | `/steelman` | Ready | Structured advocacy for alternatives. Third technique. |
+| `/devils-advocate` | Ready | Adversarial testing for plans and proposals. Fourth technique. |
 
 ## Framework Skills
 

@@ -122,6 +122,42 @@ alternatives (advocacy), devil's advocate tears down proposals (adversarial
 testing). You could run both on the same decision and get different information.
 They may both end up in the package eventually.
 
+## Devil's Advocate and Pre-Mortem Integration
+
+`/devils-advocate` is the fourth facilitation technique and the complement to
+`/steelman`. Where steelman builds up alternatives (advocacy), devil's advocate
+tears down the current plan (adversarial testing). They produce different
+information about the same decision: "is the alternative better than you think?"
+vs. "is your plan worse than you think?"
+
+**Why integrate pre-mortem rather than making it separate?** Pre-mortem ("imagine
+this failed — what went wrong?") came up as a separate brainstorm item. But in
+practice it's one *angle* of adversarial testing — the temporal lens. A thorough
+devil's advocate naturally considers "what does failure look like down the road?"
+alongside logical gaps, practical risks, and contextual fragility. Making
+pre-mortem a separate technique would force users to choose between "attack this
+plan" and "imagine this plan failed" when both are just ways of stress-testing.
+
+The integration works because pre-mortem doesn't dilute — it enriches. It's
+presented as one of several named attack lenses, alongside logical, practical,
+and contextual. The technique explicitly instructs the AI to consider which
+lenses matter for the specific plan and add angles the examples don't cover.
+Not every devil's advocate session needs the temporal lens; the AI applies
+judgment.
+
+**Why named lenses?** The attack lenses (logical, practical, contextual, temporal)
+are named as examples, not a checklist. This serves two purposes: it demonstrates
+the *kind* of thinking expected (don't just surface obvious objections — think
+from multiple angles), and it gives the AI concrete starting points while
+preserving judgment about which angles matter. Same pattern as steelman's "what
+makes a steelman work" section.
+
+**Why findings should be separable.** The technique explicitly requires findings
+to be presented as specific, distinct issues rather than a wall of criticism.
+This makes them naturally composable with `/unpack` — if the devil's advocate
+surfaces five weaknesses, the human can unpack them and work through fixes one
+at a time. The techniques compose without either needing to know about the other.
+
 ---
 
 ## Adding Decisions
