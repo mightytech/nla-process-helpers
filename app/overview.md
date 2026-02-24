@@ -32,9 +32,10 @@ The penny post was the first NLA extension — a capability that other NLAs inst
 ```
 your-nla/
   .claude/skills/
-    unpack/SKILL.md        → ../nla-process-helpers/app/unpack.md
-../nla-framework/          # Foundation
-../nla-process-helpers/    # Extension (facilitation techniques)
+    unpack/SKILL.md               → ../nla-process-helpers/app/unpack.md
+    brainstorm-cluster/SKILL.md   → ../nla-process-helpers/app/brainstorm-cluster.md
+../nla-framework/                  # Foundation
+../nla-process-helpers/            # Extension (facilitation techniques)
 ```
 
 ---
@@ -44,6 +45,7 @@ your-nla/
 | Technique | Purpose | When to Use |
 |-----------|---------|-------------|
 | `/unpack` | Structure complex conversations — identify bundled threads and work through them sequentially | When a discussion has more threads than it can hold at once |
+| `/brainstorm-cluster` | Structured brainstorming — frame, generate, cluster, evaluate, refine | When a conversation needs to explore possibilities before committing to a direction |
 
 ### Skills for Self-Maintenance
 
@@ -94,7 +96,8 @@ app/
 │
 ├── config-spec.md                   ← What users can configure
 │
-└── unpack.md                        ← Unpack skill logic
+├── unpack.md                        ← Unpack skill logic
+└── brainstorm-cluster.md            ← Brainstorm-cluster skill logic
 
 config.md                            ← User preferences (gitignored)
 

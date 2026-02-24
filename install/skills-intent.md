@@ -31,6 +31,26 @@ The NLA can add context to the wrapper (e.g., "When unpacking framework discussi
 threads often surface friction log material") but the core delegation to the process
 helpers' skill logic should remain.
 
+### /brainstorm-cluster
+
+**Purpose:** Structured brainstorming — frame a question, generate ideas, cluster themes, evaluate, and refine.
+
+**Wrapper location:** `.claude/skills/brainstorm-cluster/SKILL.md`
+
+**What the wrapper should do:** Point to the process helpers' skill logic at
+`../nla-process-helpers/app/brainstorm-cluster.md`. Same thin wrapper pattern as
+`/unpack`.
+
+**Reference implementation:**
+```yaml
+---
+name: brainstorm-cluster
+description: Structured brainstorming — frame a question, generate ideas, cluster themes, evaluate, and refine. Use when a conversation needs to explore possibilities before committing to a direction.
+disable-model-invocation: true
+---
+Read and follow `../nla-process-helpers/app/brainstorm-cluster.md`.
+```
+
 ## Wrapper Pattern
 
 Skills follow the NLA extension pattern: thin wrappers in the NLA that delegate to
@@ -42,9 +62,9 @@ skill logic in a sibling repo. This means:
 
 ## Naming
 
-The skill name `/unpack` is a suggestion. If the NLA already has a skill with this
-name, or prefers a different name, the installing AI should ask the maintainer what
-to call it. The wrapper content matters more than the directory name.
+Skill names (`/unpack`, `/brainstorm-cluster`) are suggestions. If the NLA already has
+a skill with a given name, or prefers a different name, the installing AI should ask
+the maintainer what to call it. The wrapper content matters more than the directory name.
 
 ---
 

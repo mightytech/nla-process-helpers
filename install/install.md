@@ -10,7 +10,8 @@ An `/install` or `/update` skill reads these files and applies them to the targe
 The process helpers package provides facilitation techniques for NLA projects —
 conversation-shaping skills that layer on top of whatever work is already active.
 Currently provides `/unpack` for structuring complex conversations into sequential
-threads.
+threads and `/brainstorm-cluster` for structured brainstorming with flexible
+participation modes.
 
 ## Prerequisites
 

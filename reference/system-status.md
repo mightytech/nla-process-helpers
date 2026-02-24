@@ -2,7 +2,7 @@
 
 Current state of the process helpers package.
 
-**Last updated:** 2026-02-22
+**Last updated:** 2026-02-24
 
 ---
 
@@ -11,6 +11,7 @@ Current state of the process helpers package.
 | Technique | Status | Notes |
 |-----------|--------|-------|
 | `/unpack` | Ready | Moved from framework core. First facilitation technique. |
+| `/brainstorm-cluster` | Ready | Structured brainstorming with participation modes. Second technique. |
 
 ## Framework Skills
 

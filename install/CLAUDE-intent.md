@@ -14,6 +14,11 @@ helpers extension. Specifically:
   decision points are bundled together, `/unpack` lays them out and works through
   them sequentially.
 
+- **It can structure brainstorming sessions.** When a conversation needs to explore
+  possibilities before committing to a direction, `/brainstorm-cluster` provides a
+  five-phase process (frame, generate, cluster, evaluate, refine) with flexible
+  participation modes.
+
 - **Techniques layer on active context.** Invoking a process helper doesn't interrupt
   or replace whatever mode is active — thinking, maintenance, domain work. It adds
   conversation structure on top.
@@ -27,8 +32,11 @@ The NLA's available skills section should include:
 - `/unpack` — Structure complex conversations — identify bundled threads and work
   through them sequentially. Use when a discussion has more threads than it can hold
   at once.
+- `/brainstorm-cluster` — Structured brainstorming — frame a question, generate ideas,
+  cluster themes, evaluate, and refine. Use when a conversation needs to explore
+  possibilities before committing to a direction.
 
-This is a process helper skill, distinct from framework skills like `/maintain` or
+These are process helper skills, distinct from framework skills like `/maintain` or
 `/startup`.
 
 ## What NOT to Change

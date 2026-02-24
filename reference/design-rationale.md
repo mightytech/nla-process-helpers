@@ -39,9 +39,9 @@ to install. The `/install` skill would present available techniques and let the 
 pick. This changes what a package *is* — from "install all as a unit" to "a catalog
 of related capabilities, take what you want."
 
-Not implemented yet because with one technique there's nothing to select. The mechanism
-would be a general `/install` enhancement, not specific to this package — penny post
-might benefit too.
+With two techniques now in the package (`/unpack` and `/brainstorm-cluster`), selective
+installation is practically relevant. The mechanism would be a general `/install`
+enhancement, not specific to this package — penny post might benefit too.
 
 ## Facilitation Techniques as a Category
 
@@ -55,6 +55,40 @@ Characteristics of facilitation techniques:
 - Multiple can be active simultaneously (they compose)
 - They end naturally when their purpose is served (no formal exit)
 - Subject matter expertise comes from the active context, not the technique
+
+## Brainstorm-Cluster and Participation Modes
+
+`/brainstorm-cluster` is the second facilitation technique, adding structured
+brainstorming (frame → generate → cluster → evaluate → refine). It validates the
+package model — techniques that share a shape (layering, composability, natural exit)
+but serve different facilitation needs.
+
+The technique introduces **participation modes** — a pattern not present in `/unpack`.
+At each phase, the human chooses: AI leads, human leads, or simultaneous. This was
+driven by a key insight: the same brainstorming process should scale from quick
+low-stakes uses (AI runs everything, human reviews) to deep high-stakes exploration
+(human engages at every phase) without changing the process itself. The structure is
+fixed; the participation is flexible.
+
+**Why three modes, not two?** AI-leads and human-leads cover the obvious cases.
+Simultaneous mode exists specifically to avoid anchoring — when the AI shows ideas
+first, the human's thinking narrows around them. In simultaneous mode, the AI
+generates but withholds, the human generates independently, then both reveal. Neither
+constrains the other. This matters most during initial generation, where anchoring
+has the biggest impact.
+
+**"AI leads" and the Cardinal Rule.** "AI leads" means the AI does the *work* — it
+generates ideas, proposes clusters, offers evaluations. It doesn't mean the AI
+*decides*. The human chose the mode, can switch at any transition, and the technique
+is explicit that evaluations are "proposals, not verdicts." The cardinal rule ("the
+human decides") operates at the decision level, not the labor level.
+
+**Carry-forward confirmation.** Rather than asking "who should lead?" at every phase
+(overhead) or setting it once at the start (inflexible), the technique carries forward
+the last answer and confirms briefly at each transition. This emerged from the insight
+that a simple "yes" should keep things flowing, while any other response naturally
+redirects. Low friction when the human wants to stay hands-off, easy to change gears
+when they don't.
 
 ---
 

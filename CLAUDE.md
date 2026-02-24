@@ -18,7 +18,7 @@ This system is a natural language application. The prose in `app/` is the applic
 
 **Judgment over rules.** Explain *why*, not just *what*. Purpose enables edge-case handling in ways that rules never can.
 
-**Non-determinism is a feature.** The same conversation may be unpacked differently depending on context, timing, and what's active. The goal is great facilitation, not identical facilitation.
+**Non-determinism is a feature.** The same conversation may be facilitated differently depending on context, timing, and what's active. The goal is great facilitation, not identical facilitation.
 
 **Failure is information.** Capture what didn't work and why. The friction log is a learning journal, not a bug tracker.
 
@@ -61,6 +61,7 @@ Config directives are governed by `app/config-spec.md`, which defines what's con
 | Skill | Purpose | Invocation |
 |-------|---------|------------|
 | `/unpack` | Structure complex conversations — identify bundled threads and work through them sequentially | When a discussion has more threads than it can hold at once |
+| `/brainstorm-cluster` | Structured brainstorming — frame, generate, cluster, evaluate, refine with flexible participation | When a conversation needs to explore possibilities before committing to a direction |
 
 ### Framework Skills (general NLA infrastructure)
 

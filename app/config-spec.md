@@ -22,13 +22,13 @@ If the process helpers package is not at the standard sibling location:
 
 ### Tracing
 
-Runtime tracing logs the LLM's decisions during facilitation — which threads it identified, how it proposed structuring them, what transitions it signaled.
+Runtime tracing logs the LLM's decisions during facilitation — what structure it proposed, how it managed phases and transitions, and how it responded to human input.
 
 **Trace level:**
 
 - **Off** — No tracing. Default.
-- **Standard** — Log major decisions: thread identification, proposed sets, transitions, human adjustments.
-- **Detailed** — Log everything including alternatives considered and threads that were identified but not proposed.
+- **Standard** — Log major decisions: structure proposed (threads identified, clusters formed, ideas generated), transitions signaled, participation mode choices, human adjustments.
+- **Detailed** — Log everything including alternatives considered, ideas or threads identified but not proposed, and evaluation reasoning.
 - **Custom** — User writes natural language describing exactly what to trace.
 
 **Trace output:** `reference/sessions/trace-YYYY-MM-DD.md`.

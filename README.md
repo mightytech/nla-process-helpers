@@ -19,6 +19,7 @@ Phase skills like `/think` and `/debrief` define *when* in the work lifecycle �
 | Technique | Purpose |
 |-----------|---------|
 | `/unpack` | Structure complex conversations — identify bundled threads and work through them sequentially |
+| `/brainstorm-cluster` | Structured brainstorming — frame, generate, cluster, evaluate, refine |
 
 ---
 
@@ -39,14 +40,18 @@ Or add skill wrappers manually (see `install/skills-intent.md` for details):
 ```
 # .claude/skills/unpack/SKILL.md
 Read and follow `../nla-process-helpers/app/unpack.md`.
+
+# .claude/skills/brainstorm-cluster/SKILL.md
+Read and follow `../nla-process-helpers/app/brainstorm-cluster.md`.
 ```
 
-3. Add `/unpack` to your NLA's CLAUDE.md skills table
+3. Add the skills to your NLA's CLAUDE.md skills table
 
 ### Usage from Your NLA
 
 ```
-/unpack          # Structure a complex conversation into threads
+/unpack              # Structure a complex conversation into threads
+/brainstorm-cluster  # Structured brainstorming with flexible participation
 ```
 
 The skill runs in your NLA's session with full project context. It layers on whatever's already active — thinking, maintenance, domain work.
@@ -62,7 +67,8 @@ The skill runs in your NLA's session with full project context. It layers on wha
 │   ├── shared/
 │   │   └── values.md               # Facilitation values
 │   ├── config-spec.md              # What users can configure
-│   └── unpack.md                   # Unpack skill logic
+│   ├── unpack.md                   # Unpack skill logic
+│   └── brainstorm-cluster.md       # Brainstorm-cluster skill logic
 ├── install/                         # Package manifest (for NLA integration)
 │   ├── install.md                   # Orchestrator — what this package needs
 │   ├── CLAUDE-intent.md             # Intent for NLA's CLAUDE.md
@@ -78,6 +84,7 @@ The skill runs in your NLA's session with full project context. It layers on wha
 │   └── sessions/                    # Maintenance session archives
 └── .claude/skills/                  # Skill entry points
     ├── unpack/                      # Process helper skill
+    ├── brainstorm-cluster/          # Process helper skill
     ├── startup/                     # Framework wrapper
     ├── maintain/                    # Framework wrapper
     ├── friction-log/                # Framework wrapper
@@ -116,9 +123,9 @@ The process helpers improve by improving their documentation. The friction log c
 
 ## Future Directions
 
-**Selective installation.** When this package has multiple techniques, users should be able to choose which ones to install rather than getting all of them. The `/install` skill would present the available techniques and let the user pick. This isn't implemented yet — with one technique, there's nothing to select.
+**Selective installation.** With multiple techniques in the package, users should be able to choose which ones to install rather than getting all of them. The `/install` skill would present the available techniques and let the user pick.
 
-**More techniques.** Brainstorming facilitation, card sorting, naming exercises, and other process interventions that work regardless of subject matter. These share the same shape as `/unpack`: they layer on active context, they structure how conversations happen, and different users will want different ones.
+**More techniques.** Card sorting, naming exercises, and other process interventions that work regardless of subject matter. These share the same shape as `/unpack` and `/brainstorm-cluster`: they layer on active context, they structure how conversations happen, and different users will want different ones.
 
 ---
 
