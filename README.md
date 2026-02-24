@@ -85,6 +85,7 @@ The skill runs in your NLA's session with full project context. It layers on wha
     ├── preferences/                 # Framework wrapper
     ├── install/                     # Framework wrapper
     ├── update/                      # Framework wrapper
+    ├── check-updates/               # Framework wrapper
     ├── export/                      # Framework wrapper
     ├── think/                       # Framework wrapper
     └── debrief/                     # Framework wrapper

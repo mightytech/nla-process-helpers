@@ -15,7 +15,7 @@ Current state of the process helpers package.
 ## Framework Skills
 
 All framework skill wrappers are in place: startup, maintain, friction-log, validate,
-preferences, install, update, export, think, debrief.
+check-updates, preferences, install, update, export, think, debrief.
 
 ## Package Health
 

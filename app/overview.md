@@ -55,6 +55,7 @@ When running as a standalone NLA (maintaining itself), the process helpers also 
 | `/maintain` | Edit the package's own docs and techniques |
 | `/friction-log` | Capture observations about how the techniques work |
 | `/validate` | Check system consistency |
+| `/check-updates` | Check for available updates without making changes |
 | `/preferences` | Configure user preferences |
 | `/export` | Export as a plugin for Claude Code or Cowork |
 | `/think` | Collaborative design exploration |

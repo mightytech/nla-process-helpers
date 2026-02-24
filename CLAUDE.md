@@ -72,7 +72,8 @@ Config directives are governed by `app/config-spec.md`, which defines what's con
 | `/maintain` | Edit the NLA system itself (docs, skills) | When the user wants to improve or modify the system |
 | `/validate` | Check system consistency, trace scenarios, debug behavior | When you want to verify the system works as documented |
 | `/install` | Install a new NLA package | When adding a new extension or capability |
-| `/update` | Update installed packages to latest | When checking for or applying package updates |
+| `/update` | Update the NLA — pull remote changes, apply package intent updates, or both | When checking for or applying package updates |
+| `/check-updates` | Check for available updates without making changes | When you want to see what's changed upstream |
 | `/export` | Export this NLA as a plugin for Claude Code or Cowork | When ready to distribute the NLA as a plugin |
 | `/think` | Collaborative design exploration — what to build and why | When work involves design judgment before planning |
 | `/debrief` | Reflect on completed work — surface observations and learnings | After substantive work, when transitioning between tasks |
