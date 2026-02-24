@@ -34,6 +34,7 @@ your-nla/
   .claude/skills/
     unpack/SKILL.md               → ../nla-process-helpers/app/unpack.md
     brainstorm-cluster/SKILL.md   → ../nla-process-helpers/app/brainstorm-cluster.md
+    steelman/SKILL.md             → ../nla-process-helpers/app/steelman.md
 ../nla-framework/                  # Foundation
 ../nla-process-helpers/            # Extension (facilitation techniques)
 ```
@@ -46,6 +47,7 @@ your-nla/
 |-----------|---------|-------------|
 | `/unpack` | Structure complex conversations — identify bundled threads and work through them sequentially | When a discussion has more threads than it can hold at once |
 | `/brainstorm-cluster` | Structured brainstorming — frame, generate, cluster, evaluate, refine | When a conversation needs to explore possibilities before committing to a direction |
+| `/steelman` | Structured advocacy — build the strongest case for alternatives before committing | When a decision is forming and the unchosen paths deserve a fair hearing |
 
 ### Skills for Self-Maintenance
 
@@ -97,7 +99,8 @@ app/
 ├── config-spec.md                   ← What users can configure
 │
 ├── unpack.md                        ← Unpack skill logic
-└── brainstorm-cluster.md            ← Brainstorm-cluster skill logic
+├── brainstorm-cluster.md            ← Brainstorm-cluster skill logic
+└── steelman.md                      ← Steelman skill logic
 
 config.md                            ← User preferences (gitignored)
 

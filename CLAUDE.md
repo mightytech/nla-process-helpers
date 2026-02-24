@@ -62,6 +62,7 @@ Config directives are governed by `app/config-spec.md`, which defines what's con
 |-------|---------|------------|
 | `/unpack` | Structure complex conversations — identify bundled threads and work through them sequentially | When a discussion has more threads than it can hold at once |
 | `/brainstorm-cluster` | Structured brainstorming — frame, generate, cluster, evaluate, refine with flexible participation | When a conversation needs to explore possibilities before committing to a direction |
+| `/steelman` | Structured advocacy — build the strongest case for alternatives before committing to a direction | When a decision is forming and the unchosen paths deserve a fair hearing |
 
 ### Framework Skills (general NLA infrastructure)
 

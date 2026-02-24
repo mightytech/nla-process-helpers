@@ -90,6 +90,38 @@ that a simple "yes" should keep things flowing, while any other response natural
 redirects. Low friction when the human wants to stay hands-off, easy to change gears
 when they don't.
 
+## Steelman and the Advocacy Model
+
+`/steelman` is the third facilitation technique. Where `/unpack` structures complex
+conversations and `/brainstorm-cluster` explores possibility spaces, `/steelman`
+ensures alternatives get a fair hearing before a decision is committed.
+
+**Why advocacy, not analysis?** The technique deliberately builds *cases*, not
+*comparisons*. A pros/cons list is neutral; a steelman is persuasive. The
+distinction matters because a balanced overview lets you nod along — a genuinely
+persuasive case for an alternative forces you to engage with it seriously. The
+quality bar is high: a weak steelman gives false confidence that alternatives
+were considered.
+
+**Why no participation modes?** Unlike brainstorm-cluster, where anchoring is a
+real concern and the human may want to generate independently, steelman is
+inherently AI-led. The human already has their preferred direction — they're
+asking the AI to make the case they can't (or won't) make for themselves. If
+the human could already build the strongest case for the alternative, they
+probably wouldn't need the technique.
+
+**Why "any outcome is success"?** The technique's value is the fair hearing, not
+the reversal. A human who commits to their original direction after hearing the
+strongest possible alternative case is making a better decision than one who
+commits without hearing it. Changed mind, confirmed direction, and "I need to
+think about this more" are all the technique working.
+
+**Steelman vs. devil's advocate.** These came up as separate items in the
+brainstorm that generated `/steelman`. They're complementary: steelman builds up
+alternatives (advocacy), devil's advocate tears down proposals (adversarial
+testing). You could run both on the same decision and get different information.
+They may both end up in the package eventually.
+
 ---
 
 ## Adding Decisions

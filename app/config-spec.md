@@ -27,8 +27,8 @@ Runtime tracing logs the LLM's decisions during facilitation — what structure 
 **Trace level:**
 
 - **Off** — No tracing. Default.
-- **Standard** — Log major decisions: structure proposed (threads identified, clusters formed, ideas generated), transitions signaled, participation mode choices, human adjustments.
-- **Detailed** — Log everything including alternatives considered, ideas or threads identified but not proposed, and evaluation reasoning.
+- **Standard** — Log major decisions: structure proposed (threads identified, clusters formed, ideas generated, alternatives steelmanned), transitions signaled, participation mode choices, human adjustments.
+- **Detailed** — Log everything including alternatives considered, ideas or threads identified but not proposed, evaluation reasoning, and advocacy quality assessments.
 - **Custom** — User writes natural language describing exactly what to trace.
 
 **Trace output:** `reference/sessions/trace-YYYY-MM-DD.md`.

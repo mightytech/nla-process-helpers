@@ -19,6 +19,10 @@ helpers extension. Specifically:
   five-phase process (frame, generate, cluster, evaluate, refine) with flexible
   participation modes.
 
+- **It can steelman alternatives.** When a decision is forming and the unchosen
+  paths deserve a fair hearing, `/steelman` builds the strongest possible case
+  for alternatives — genuine advocacy, not balanced overviews.
+
 - **Techniques layer on active context.** Invoking a process helper doesn't interrupt
   or replace whatever mode is active — thinking, maintenance, domain work. It adds
   conversation structure on top.
@@ -35,6 +39,9 @@ The NLA's available skills section should include:
 - `/brainstorm-cluster` — Structured brainstorming — frame a question, generate ideas,
   cluster themes, evaluate, and refine. Use when a conversation needs to explore
   possibilities before committing to a direction.
+- `/steelman` — Structured advocacy — build the strongest case for alternatives
+  before committing to a direction. Use when a decision is forming and the unchosen
+  paths deserve a fair hearing.
 
 These are process helper skills, distinct from framework skills like `/maintain` or
 `/startup`.

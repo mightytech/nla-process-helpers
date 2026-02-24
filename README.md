@@ -20,6 +20,7 @@ Phase skills like `/think` and `/debrief` define *when* in the work lifecycle �
 |-----------|---------|
 | `/unpack` | Structure complex conversations — identify bundled threads and work through them sequentially |
 | `/brainstorm-cluster` | Structured brainstorming — frame, generate, cluster, evaluate, refine |
+| `/steelman` | Structured advocacy — build the strongest case for alternatives before committing |
 
 ---
 
@@ -43,6 +44,9 @@ Read and follow `../nla-process-helpers/app/unpack.md`.
 
 # .claude/skills/brainstorm-cluster/SKILL.md
 Read and follow `../nla-process-helpers/app/brainstorm-cluster.md`.
+
+# .claude/skills/steelman/SKILL.md
+Read and follow `../nla-process-helpers/app/steelman.md`.
 ```
 
 3. Add the skills to your NLA's CLAUDE.md skills table
@@ -52,6 +56,7 @@ Read and follow `../nla-process-helpers/app/brainstorm-cluster.md`.
 ```
 /unpack              # Structure a complex conversation into threads
 /brainstorm-cluster  # Structured brainstorming with flexible participation
+/steelman            # Build the strongest case for alternatives before committing
 ```
 
 The skill runs in your NLA's session with full project context. It layers on whatever's already active — thinking, maintenance, domain work.
@@ -68,7 +73,8 @@ The skill runs in your NLA's session with full project context. It layers on wha
 │   │   └── values.md               # Facilitation values
 │   ├── config-spec.md              # What users can configure
 │   ├── unpack.md                   # Unpack skill logic
-│   └── brainstorm-cluster.md       # Brainstorm-cluster skill logic
+│   ├── brainstorm-cluster.md       # Brainstorm-cluster skill logic
+│   └── steelman.md                 # Steelman skill logic
 ├── install/                         # Package manifest (for NLA integration)
 │   ├── install.md                   # Orchestrator — what this package needs
 │   ├── CLAUDE-intent.md             # Intent for NLA's CLAUDE.md
@@ -85,6 +91,7 @@ The skill runs in your NLA's session with full project context. It layers on wha
 └── .claude/skills/                  # Skill entry points
     ├── unpack/                      # Process helper skill
     ├── brainstorm-cluster/          # Process helper skill
+    ├── steelman/                    # Process helper skill
     ├── startup/                     # Framework wrapper
     ├── maintain/                    # Framework wrapper
     ├── friction-log/                # Framework wrapper
