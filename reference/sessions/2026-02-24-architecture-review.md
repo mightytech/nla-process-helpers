@@ -83,4 +83,20 @@ The design-rationale.md gap is the most architecturally significant finding. The
 
 ---
 
+## State at Close
+
+All 3 Fix items and all actionable Improve items have been resolved:
+
+- **design-rationale.md selective installation** — Updated to reflect two techniques; reframed as practically relevant.
+- **README.md stale language** — Removed "one technique" phrasing; updated manual setup to show both techniques.
+- **config-spec.md tracing descriptions** — Broadened to generic facilitation language covering both techniques.
+- **design-rationale.md brainstorm-cluster section** — Added "Brainstorm-Cluster and Participation Modes" documenting the design decisions.
+- **CLAUDE.md "unpacked" wording** — Changed to "facilitated."
+
+2 Improve items were deliberately skipped (CLAUDE.md structure examples, overview.md layering example) — reviewed and judged adequate as-is.
+
+Nothing pending. The package documentation is consistent with the two-technique reality.
+
+---
+
 *Review performed by reading all 14 specified files plus the framework startup skill. No structural validation was performed (already passed clean). Focus was prose-architecture coherence.*
