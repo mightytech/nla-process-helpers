@@ -19,6 +19,17 @@ and `/devils-advocate` for stress-testing plans and proposals.
 - **NLA Framework** — The target NLA must be built on the NLA framework.
 - **This repo cloned as a sibling** — `../nla-process-helpers/` relative to the NLA.
 
+## Permissions
+
+What filesystem access this package needs in installing NLAs. The installing skill
+reads these and proposes entries for the NLA's `.claude/settings.local.json`.
+
+| Pattern | Purpose | Required |
+|---------|---------|----------|
+| `Read(../nla-process-helpers/**)` | Read technique docs and skill logic | Yes |
+
+No write patterns are declared. Writes to external directories stay manually approved.
+
 ## What's in This Directory
 
 Each file describes the **intent** of changes needed at a specific integration point

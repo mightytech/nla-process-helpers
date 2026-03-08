@@ -2,7 +2,7 @@
 
 Current state of the process helpers package.
 
-**Last updated:** 2026-02-24
+**Last updated:** 2026-03-08
 
 ---
 
@@ -18,7 +18,11 @@ Current state of the process helpers package.
 ## Framework Skills
 
 All framework skill wrappers are in place: startup, maintain, friction-log, validate,
-check-updates, preferences, install, update, export, think, debrief.
+check-updates, preferences, install, update, export, think, debrief, close, guide.
+
+## Penny Post Skills
+
+Feedback extension wrappers are in place: check-feedback, write-letter.
 
 ## Package Health
 

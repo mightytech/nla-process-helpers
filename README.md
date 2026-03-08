@@ -109,7 +109,11 @@ The skill runs in your NLA's session with full project context. It layers on wha
     ├── check-updates/               # Framework wrapper
     ├── export/                      # Framework wrapper
     ├── think/                       # Framework wrapper
-    └── debrief/                     # Framework wrapper
+    ├── debrief/                     # Framework wrapper
+    ├── close/                       # Framework wrapper
+    ├── guide/                       # Framework wrapper
+    ├── check-feedback/              # Penny post wrapper
+    └── write-letter/                # Penny post wrapper
 ```
 
 ---

@@ -65,6 +65,13 @@ Config directives are governed by `app/config-spec.md`, which defines what's con
 | `/steelman` | Structured advocacy — build the strongest case for alternatives before committing to a direction | When a decision is forming and the unchosen paths deserve a fair hearing |
 | `/devils-advocate` | Adversarial testing — systematically find weaknesses in a plan or proposal before committing | When an approach needs stress-testing before resources are committed |
 
+### Penny Post Skills (feedback extension)
+
+| Skill | Purpose | Invocation |
+|-------|---------|------------|
+| `/check-feedback` | Discover and triage feedback from intake channels | Periodically, or when checking what feedback has arrived |
+| `/write-letter` | Draft and submit a feedback letter to another project | After maintenance sessions when learnings are fresh |
+
 ### Framework Skills (general NLA infrastructure)
 
 | Skill | Purpose | Invocation |
@@ -80,6 +87,8 @@ Config directives are governed by `app/config-spec.md`, which defines what's con
 | `/export` | Export this NLA as a plugin for Claude Code or Cowork | When ready to distribute the NLA as a plugin |
 | `/think` | Collaborative design exploration — what to build and why | When work involves design judgment before planning |
 | `/debrief` | Reflect on completed work — surface observations and learnings | After substantive work, when transitioning between tasks |
+| `/close` | Wrap up a session — finalize session log, check loose ends, summarize state | At the end of a work session |
+| `/guide` | Context-aware help — how the NLA works, what to do next, how pieces connect | When unfamiliar with the system or unsure what to do next |
 
 ### If the user asks about the system:
 -> Explain based on `app/overview.md`
@@ -125,6 +134,7 @@ This project uses the NLA Framework at `../nla-framework/`. If your framework is
 | `config.md` | User preferences (gitignored) |
 | `reference/` | Design rationale, friction log, session archives |
 | `../nla-framework/core/` | Framework foundations and skill logic |
+| `../nla-penny-post/` | Feedback conventions and skill logic (penny post extension) |
 
 ---
 

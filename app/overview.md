@@ -62,10 +62,21 @@ When running as a standalone NLA (maintaining itself), the process helpers also 
 | `/friction-log` | Capture observations about how the techniques work |
 | `/validate` | Check system consistency |
 | `/check-updates` | Check for available updates without making changes |
+| `/install` | Install a new NLA package |
+| `/update` | Pull remote changes and apply package intent updates |
 | `/preferences` | Configure user preferences |
 | `/export` | Export as a plugin for Claude Code or Cowork |
 | `/think` | Collaborative design exploration |
+| `/close` | Wrap up a session — finalize log, check loose ends |
 | `/debrief` | Post-work reflection |
+| `/guide` | Context-aware help — how the system works, what to do next |
+
+### Penny Post Skills (feedback extension)
+
+| Skill | Purpose |
+|-------|---------|
+| `/check-feedback` | Discover and triage feedback from intake channels |
+| `/write-letter` | Draft and submit a feedback letter to another project |
 
 ---
 
@@ -115,6 +126,9 @@ install/
 ../nla-framework/core/
 ├── nla-foundations.md               ← What NLAs are (framework)
 └── skills/                          ← Framework skill logic
+
+../nla-penny-post/
+└── app/                             ← Feedback skill logic (penny post extension)
 
 reference/
 ├── design-rationale.md              ← Why the system is built this way
