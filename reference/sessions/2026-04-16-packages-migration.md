@@ -66,6 +66,34 @@ wrapper) and the `/validate` description update (adds coherence review).
   landed in the same Task B commit. Overall: migration is architecturally clean,
   consumer-side and package-side are consistent.
 
+**Pre-tag cleanup (complete, committed):**
+
+- Moved the `packages/nla-penny-post` submodule pointer from main HEAD (`6a5bba1`)
+  back to tag `v0.0.1` (`1ef501e`). Maintainer surfaced the question "are we using
+  tagged versions?" during pre-push review; framework was fortuitously at
+  `HEAD == v0.0.3`, but penny post HEAD was one commit past its `v0.0.1` tag
+  (session-log update, no behavior change). Both submodules now pinned at their
+  tagged releases.
+- Annotated `reference/installed-packages.md` Updated entries to note the tag
+  versions for each submodule.
+
+**Release (complete, pushed):**
+
+- Tagged `v0.0.1` — first formal release of this package. Annotated tag describes
+  the four facilitation techniques, the `packages/` submodule convention, and
+  pinning against nla-framework v0.0.3 and nla-penny-post v0.0.1.
+- Pushed all three commits and the `v0.0.1` tag to origin.
+
+**Feedback (sent):**
+
+- Submitted framework issue #23 with two items from this session:
+  Item 1 — initial submodule install should default to tagged releases
+  (the gap surfaced during pre-tag review). Item 2 — residual permission drift
+  observation (Claude Code's auto-approval-and-record loop continues to accrete
+  bash-command entries in settings.local.json, even after the packages/ migration
+  closed out the Read-path accumulation concerns tracked by #6/#7/#12).
+  Framework repo: https://github.com/mightytech/nla-framework/issues/23
+
 ## Decisions Made
 
 - **Submodule URL style:** HTTPS for the framework and penny post (read-only
@@ -78,6 +106,13 @@ wrapper) and the `/validate` description update (adds coherence review).
 - **Split into two tasks with a commit checkpoint.** Consumer-side migration is
   independently verifiable; package-side migration is the contract this package
   exposes to others. Separate commits make each auditable.
+- **Pin submodules at tagged releases, not HEAD.** `git submodule add` defaults
+  to remote HEAD, which only equals the latest tag by coincidence. Tagged
+  releases are the stable install target and what `/update`'s advance-path
+  already recommends. Fixed as pre-tag cleanup; sent upstream as framework #23.
+- **Tag this release as `v0.0.1`** — first formal release. Follows the
+  ecosystem's `v0.0.X` convention (framework at `v0.0.3`, penny post at
+  `v0.0.1`). Annotated tag documents the release shape.
 
 ## What Didn't Work
 
@@ -94,7 +129,52 @@ no file reference was broken — the tree was just incomplete.
 
 ## Debrief
 
-*(Pending session close.)*
+Ran a full `/debrief` at session close. Refined conclusions:
+
+**Process observations worth preserving:**
+
+- **The two-task-with-checkpoint pattern is load-bearing for migrations.** Task
+  A's validation surfaced four stale-doc issues that would have been much
+  harder to spot in a single mega-change (session-checkpoint missing from two
+  tables, validate description needing broadening, system-status.md skills list
+  stale, system-status.md timestamp old). Task B's architecture review caught
+  one more (README "What's Inside" tree missing `packages/`). Neither Task
+  would have worked as cleanly without the intermediate commit checkpoint.
+  Worth remembering as a pattern for future migrations that have a natural
+  seam (consumer-side / package-side, or similar).
+
+- **Stale documentation mirrors are structurally invisible.** Structural
+  validation looks for *broken* references — it doesn't catch *stale*
+  hand-maintained trees. The README "What's Inside" tree had no broken
+  reference; it was just incomplete. Architecture review (which checks path
+  resolution / consistency at a higher level) caught it. The `/close` skill's
+  "documentation mirrors" concept is the right framing for this class of
+  problem — worth keeping in mind that migrations require both validation
+  modes to catch both classes.
+
+**Feedback sent upstream:**
+
+- **Install-path tag pinning gap** (framework #23, Item 1). The principle was
+  already in `update.md`'s advance-path; the install-path needs to inherit it.
+  Concrete, actionable framework fix.
+- **Residual permission drift** (framework #23, Item 2). Data point, not a
+  request — the packages/ migration resolved the Read-path accumulation but
+  bash-command auto-approval continues through a narrower channel.
+
+**Session-local positive observations (not captured externally):**
+
+- Maintainer's process-design instincts showed up three places and each one
+  saved real friction: splitting into Tasks A/B, the SSH-vs-HTTPS URL strategy
+  (SSH where we push, HTTPS where we only read), catching the untagged
+  submodule pins. Treating infrastructure decisions with the same care as
+  design decisions.
+
+**Calibration:**
+
+- Heavy, file-by-file plan proposals are a feature, not ceremony. Maintainer
+  confirmed dense proposals are what let him respond tersely — "I get
+  everything I need up front and don't need to ask questions." Saved as memory
+  so future sessions don't drift toward lightweight summaries.
 
 ## State at Close
 
@@ -108,13 +188,25 @@ Also picked up in the same session:
 - `/validate` and `/export` description refreshes propagated to wrappers and the
   CLAUDE.md skills table
 
-Two commits: Task A (`3f5d3cc`) for consumer side, Task B for package side.
+Three commits pushed to origin:
+- `3f5d3cc` — Task A (consumer side)
+- `c78d3c2` — Task B (package side)
+- `22dee9f` — Pre-tag cleanup (pin penny post submodule at v0.0.1)
 
-No pending work. Friction log and feedback log both empty.
+Tagged `v0.0.1` (annotated), pushed to origin. First formal release.
 
-**Potential follow-ups (not blocking):**
+Submodules pinned at tagged releases: framework `v0.0.3`, penny post `v0.0.1`.
+
+Framework feedback sent: issue #23 on `mightytech/nla-framework` (install-path
+tag pinning + permission-drift observation).
+
+Friction log and feedback log both empty. No pending work.
+
+**Potential follow-ups (not blocking, not scheduled):**
 - Consider adding `install/update-notes.md` to this package so future consumers get
   narrative guidance when they `/update` across breaking changes. Framework has this
   pattern; extension packages haven't adopted it.
 - Consider a `.gitattributes` with `export-ignore` for `reference/` if/when anyone
   exports a plugin using this project — not relevant until then.
+- Watch framework #23 for resolution. If Item 1 lands, re-run `/update` later to
+  pick up the install-path tag-pinning check.
