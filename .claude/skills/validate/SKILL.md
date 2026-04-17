@@ -1,6 +1,6 @@
 ---
 name: validate
-description: Check system consistency, review architecture, trace scenarios, debug behavior.
+description: Validate the NLA system — structural checks, architecture review, scenario walkthroughs, debug unexpected behavior, or coherence review.
 disable-model-invocation: true
 ---
-Read and follow `../nla-framework/core/skills/validate.md`.
+Read and follow `packages/nla-framework/core/skills/validate.md`.

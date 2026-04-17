@@ -8,17 +8,17 @@ This document defines what users of the process helpers can configure. The `/pre
 
 ### Framework Path
 
-If the NLA Framework is not at the standard sibling location (`../nla-framework/`), users can specify the actual path.
+If the NLA Framework is not at the standard submodule location (`packages/nla-framework/`), users can specify the actual path.
 
-**Default:** `../nla-framework/`
+**Default:** `packages/nla-framework/`
 
 ### Process Helpers Location
 
-If the process helpers package is not at the standard sibling location:
+If the process helpers package is not at the standard submodule location:
 
-- **Local path** — Where this repo is cloned
+- **Local path** — Where this package is installed in the NLA
 
-**Default:** `../nla-process-helpers/` (sibling directory).
+**Default:** `packages/nla-process-helpers/` (git submodule).
 
 ### Tracing
 

@@ -9,10 +9,10 @@ Each entry records what package was installed, when, what state the package was 
 ## NLA Framework
 
 **Installed:** 2026-02-22 (initial package creation)
-**Source:** `../nla-framework/`
+**Source:** `packages/nla-framework/` (git submodule — was `../nla-framework/` before 2026-04-16)
 
 The process helpers package was created as a framework-based NLA. Framework skills are
-thin wrappers in `.claude/skills/` delegating to `../nla-framework/core/skills/`.
+thin wrappers in `.claude/skills/` delegating to `packages/nla-framework/core/skills/`.
 
 ### Updated 2026-02-23
 
@@ -40,11 +40,24 @@ thin wrappers in `.claude/skills/` delegating to `../nla-framework/core/skills/`
 
 **Notes:** Three framework updates applied in one pass: `/close` skill (2026-03-04), permission management model (2026-03-04), `/guide` skill + Working Rhythms (2026-03-05). Core changes (startup `/guide` awareness, maintain `/guide` mention, Working Rhythms in foundations, close delegation in maintain) propagate automatically via thin wrappers.
 
+### Updated 2026-04-16
+
+**Package state:** a754ae3
+
+| Intent File | What Changed | Changes Made |
+|-------------|-------------|--------------|
+| install.md, CLAUDE-intent.md, structure-intent.md, package-intent.md, skills-intent.md | `../nla-framework/` sibling convention replaced with `packages/nla-framework/` git submodule; `Read(../nla-framework/**)` permission retired (reads now in-project) | Added framework as git submodule at `packages/nla-framework/` (HTTPS URL). Updated all 13 framework thin wrappers to point at `packages/nla-framework/core/skills/`. Removed absolute `Read(.../nla-framework/**)` entry from `.claude/settings.local.json`. |
+| skills-intent.md | New `/session-checkpoint` skill; `/validate` description adds coherence review; `/export` description reflects view-source plugin model | Created `.claude/skills/session-checkpoint/SKILL.md` wrapper; updated `/validate` and `/export` descriptions. |
+
+**Downstream updates:** CLAUDE.md (`/session-checkpoint` added to skills table; Environment line and Key Files table updated to `packages/…`); README.md (framework links, prerequisites, and footer updated); `app/overview.md` top-of-doc framework link; `app/config-spec.md` defaults updated to `packages/…`.
+
+**Notes:** Consumer-side portion of the `packages/` migration (2026-04-15 framework update). Package-side intent files (this package's own `install/`) to be updated in a separate pass.
+
 ---
 
 ## Penny Post
 
-**Source:** `../nla-penny-post/`
+**Source:** `packages/nla-penny-post/` (git submodule — was `../nla-penny-post/` before 2026-04-16)
 **Installed:** 2026-03-08
 **Package state:** 6a43a8d
 
@@ -58,6 +71,16 @@ thin wrappers in `.claude/skills/` delegating to `../nla-framework/core/skills/`
 ### Notes
 
 Package manifest predates the Permissions convention — no permission entries declared. Penny post reads are not pre-approved in settings.local.json; Claude Code will prompt on first use. Downstream files updated: app/overview.md (skills table + document hierarchy), reference/system-status.md, README.md directory tree.
+
+### Updated 2026-04-16
+
+**Package state:** 6a5bba1
+
+| Intent File | What Changed | Changes Made |
+|-------------|-------------|--------------|
+| install.md, CLAUDE-intent.md, skills-intent.md | `../nla-penny-post/` sibling convention replaced with `packages/nla-penny-post/` git submodule | Added penny post as git submodule at `packages/nla-penny-post/` (HTTPS URL). Updated `check-feedback` and `write-letter` thin wrappers to point at `packages/nla-penny-post/app/`. Removed absolute `Read(.../nla-penny-post/**)` entry from `.claude/settings.local.json`. |
+
+**Notes:** Phase 2 of the framework's `packages/` migration — applied alongside the framework update on the same date.
 
 ---
 

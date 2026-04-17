@@ -1,6 +1,6 @@
 # Process Helpers
 
-A facilitation technique package for NLA projects, built on the [NLA Framework](../nla-framework/).
+A facilitation technique package for NLA projects, built on the [NLA Framework](packages/nla-framework/).
 
 ---
 
@@ -8,7 +8,7 @@ A facilitation technique package for NLA projects, built on the [NLA Framework](
 
 The process helpers package provides facilitation techniques â€” skills that shape how conversations proceed, layering on top of whatever work is already active.
 
-It's the second **NLA extension** (after [penny post](../nla-penny-post/)). Most users interact with it through skills installed in their own NLA, not by opening this project directly.
+It's the second **NLA extension** (after [penny post](https://github.com/mightytech/nla-penny-post)). Most users interact with it through skills installed in their own NLA, not by opening this project directly.
 
 ### Why a Package, Not Core
 
@@ -29,7 +29,7 @@ Phase skills like `/think` and `/debrief` define *when* in the work lifecycle â€
 
 ### Prerequisites
 
-- **NLA Framework** at `../nla-framework/`
+- **NLA Framework** as a git submodule at `packages/nla-framework/` (included automatically when the package is installed via `/install`)
 - **Claude Code** installed
 
 ### Setup
@@ -155,4 +155,4 @@ Submit feedback about **process helpers** by opening an issue on this repo.
 
 ---
 
-*For more about the NLA Framework, see the [framework README](../nla-framework/README.md).*
+*For more about the NLA Framework, see the [framework README](packages/nla-framework/README.md).*

@@ -2,7 +2,7 @@
 
 Current state of the process helpers package.
 
-**Last updated:** 2026-03-08
+**Last updated:** 2026-04-16
 
 ---
 
@@ -18,11 +18,13 @@ Current state of the process helpers package.
 ## Framework Skills
 
 All framework skill wrappers are in place: startup, maintain, friction-log, validate,
-check-updates, preferences, install, update, export, think, debrief, close, guide.
+check-updates, preferences, install, update, export, think, debrief, session-checkpoint,
+close, guide. Framework is loaded via git submodule at `packages/nla-framework/`.
 
 ## Penny Post Skills
 
-Feedback extension wrappers are in place: check-feedback, write-letter.
+Feedback extension wrappers are in place: check-feedback, write-letter. Penny post is
+loaded via git submodule at `packages/nla-penny-post/`.
 
 ## Package Health
 

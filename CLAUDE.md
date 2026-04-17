@@ -80,13 +80,14 @@ Config directives are governed by `app/config-spec.md`, which defines what's con
 | `/preferences` | Create or edit user configuration | When the user wants to personalize behavior |
 | `/friction-log` | Log observations to the friction log from any context | When you notice something worth recording |
 | `/maintain` | Edit the NLA system itself (docs, skills) | When the user wants to improve or modify the system |
-| `/validate` | Check system consistency, trace scenarios, debug behavior | When you want to verify the system works as documented |
+| `/validate` | Check system consistency, review architecture or coherence, trace scenarios, debug behavior | When you want to verify the system works as documented |
 | `/install` | Install a new NLA package | When adding a new extension or capability |
 | `/update` | Update the NLA — pull remote changes, apply package intent updates, or both | When checking for or applying package updates |
 | `/check-updates` | Check for available updates without making changes | When you want to see what's changed upstream |
 | `/export` | Export this NLA as a plugin for Claude Code or Cowork | When ready to distribute the NLA as a plugin |
 | `/think` | Collaborative design exploration — what to build and why | When work involves design judgment before planning |
 | `/debrief` | Reflect on completed work — surface observations and learnings | After substantive work, when transitioning between tasks |
+| `/session-checkpoint` | Preserve state and refresh context at transition points in long sessions | Between work phases, or before reasoning from files read long ago |
 | `/close` | Wrap up a session — finalize session log, check loose ends, summarize state | At the end of a work session |
 | `/guide` | Context-aware help — how the NLA works, what to do next, how pieces connect | When unfamiliar with the system or unsure what to do next |
 
@@ -123,7 +124,7 @@ A technique that helps the conversation is always better than one that controls 
 
 ## Environment
 
-This project uses the NLA Framework at `../nla-framework/`. If your framework is elsewhere, update the skill wrappers in `.claude/skills/`.
+This project uses the NLA Framework as a git submodule at `packages/nla-framework/`. If your framework is elsewhere, update the skill wrappers in `.claude/skills/`.
 
 ### Key Files
 
@@ -133,8 +134,8 @@ This project uses the NLA Framework at `../nla-framework/`. If your framework is
 | `app/config-spec.md` | What's configurable and how (developer-defined) |
 | `config.md` | User preferences (gitignored) |
 | `reference/` | Design rationale, friction log, session archives |
-| `../nla-framework/core/` | Framework foundations and skill logic |
-| `../nla-penny-post/` | Feedback conventions and skill logic (penny post extension) |
+| `packages/nla-framework/core/` | Framework foundations and skill logic |
+| `packages/nla-penny-post/` | Feedback conventions and skill logic (penny post extension) |
 
 ---
 
