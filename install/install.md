@@ -16,19 +16,21 @@ and `/devils-advocate` for stress-testing plans and proposals.
 
 ## Prerequisites
 
-- **NLA Framework** — The target NLA must be built on the NLA framework.
-- **This repo cloned as a sibling** — `../nla-process-helpers/` relative to the NLA.
+- **NLA Framework** — The target NLA must be built on the NLA framework (expected at
+  `packages/nla-framework/`).
+- **This repo added as a submodule** at `packages/nla-process-helpers/`. Thin wrapper
+  skills reference this path. Add with:
+  `git submodule add --depth 1 https://github.com/mightytech/nla-process-helpers.git packages/nla-process-helpers`
 
 ## Permissions
 
-What filesystem access this package needs in installing NLAs. The installing skill
-reads these and proposes entries for the NLA's `.claude/settings.local.json`.
+Permissions the installing NLA should pre-approve in `.claude/settings.local.json`.
 
-| Pattern | Purpose | Required |
-|---------|---------|----------|
-| `Read(../nla-process-helpers/**)` | Read technique docs and skill logic | Yes |
+Process helpers is pure conversational logic — it has no shell commands, external
+tools, or write needs of its own. Since the package lives inside the installing
+NLA at `packages/nla-process-helpers/`, no read permission is required either.
 
-No write patterns are declared. Writes to external directories stay manually approved.
+**No permission entries required.**
 
 ## What's in This Directory
 

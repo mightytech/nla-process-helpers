@@ -13,9 +13,9 @@ What skill wrappers the NLA should have after installing process helpers.
 **Wrapper location:** `.claude/skills/unpack/SKILL.md`
 
 **What the wrapper should do:** Point to the process helpers' skill logic at
-`../nla-process-helpers/app/unpack.md`. The wrapper is thin — it tells the
+`packages/nla-process-helpers/app/unpack.md`. The wrapper is thin — it tells the
 AI to read and follow that document. The actual skill logic lives in the process
-helpers repo so it stays current when the repo is pulled.
+helpers submodule so it stays current when the submodule is updated.
 
 **Reference implementation:**
 ```yaml
@@ -24,7 +24,7 @@ name: unpack
 description: Structure complex conversations — identify bundled threads and work through them sequentially. Use when a discussion has more threads than it can hold at once.
 disable-model-invocation: true
 ---
-Read and follow `../nla-process-helpers/app/unpack.md`.
+Read and follow `packages/nla-process-helpers/app/unpack.md`.
 ```
 
 The NLA can add context to the wrapper (e.g., "When unpacking framework discussions,
@@ -38,7 +38,7 @@ helpers' skill logic should remain.
 **Wrapper location:** `.claude/skills/brainstorm-cluster/SKILL.md`
 
 **What the wrapper should do:** Point to the process helpers' skill logic at
-`../nla-process-helpers/app/brainstorm-cluster.md`. Same thin wrapper pattern as
+`packages/nla-process-helpers/app/brainstorm-cluster.md`. Same thin wrapper pattern as
 `/unpack`.
 
 **Reference implementation:**
@@ -48,7 +48,7 @@ name: brainstorm-cluster
 description: Structured brainstorming — frame a question, generate ideas, cluster themes, evaluate, and refine. Use when a conversation needs to explore possibilities before committing to a direction.
 disable-model-invocation: true
 ---
-Read and follow `../nla-process-helpers/app/brainstorm-cluster.md`.
+Read and follow `packages/nla-process-helpers/app/brainstorm-cluster.md`.
 ```
 
 ### /steelman
@@ -58,7 +58,7 @@ Read and follow `../nla-process-helpers/app/brainstorm-cluster.md`.
 **Wrapper location:** `.claude/skills/steelman/SKILL.md`
 
 **What the wrapper should do:** Point to the process helpers' skill logic at
-`../nla-process-helpers/app/steelman.md`. Same thin wrapper pattern as
+`packages/nla-process-helpers/app/steelman.md`. Same thin wrapper pattern as
 `/unpack`.
 
 **Reference implementation:**
@@ -68,7 +68,7 @@ name: steelman
 description: Structured advocacy — build the strongest case for alternatives before committing to a direction. Use when a decision is forming and the unchosen paths deserve a fair hearing.
 disable-model-invocation: true
 ---
-Read and follow `../nla-process-helpers/app/steelman.md`.
+Read and follow `packages/nla-process-helpers/app/steelman.md`.
 ```
 
 ### /devils-advocate
@@ -78,7 +78,7 @@ Read and follow `../nla-process-helpers/app/steelman.md`.
 **Wrapper location:** `.claude/skills/devils-advocate/SKILL.md`
 
 **What the wrapper should do:** Point to the process helpers' skill logic at
-`../nla-process-helpers/app/devils-advocate.md`. Same thin wrapper pattern as
+`packages/nla-process-helpers/app/devils-advocate.md`. Same thin wrapper pattern as
 `/unpack`.
 
 **Reference implementation:**
@@ -88,15 +88,15 @@ name: devils-advocate
 description: Adversarial testing — systematically find weaknesses in a plan or proposal before committing. Use when an approach needs stress-testing.
 disable-model-invocation: true
 ---
-Read and follow `../nla-process-helpers/app/devils-advocate.md`.
+Read and follow `packages/nla-process-helpers/app/devils-advocate.md`.
 ```
 
 ## Wrapper Pattern
 
 Skills follow the NLA extension pattern: thin wrappers in the NLA that delegate to
-skill logic in a sibling repo. This means:
+skill logic in the `packages/nla-process-helpers/` submodule. This means:
 
-- Pulling the process helpers repo updates the skill logic without touching the NLA.
+- Updating the process helpers submodule updates the skill logic without touching the NLA.
 - The NLA can customize the wrapper with project-specific additions.
 - The skill runs in the NLA's session with full project context.
 

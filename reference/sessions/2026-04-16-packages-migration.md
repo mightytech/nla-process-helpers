@@ -1,7 +1,7 @@
 # Maintenance Session: Migrate to packages/ Submodule Convention
 
 **Date:** 2026-04-16
-**Status:** In Progress
+**Status:** Complete
 
 ## Intent
 
@@ -41,7 +41,30 @@ wrapper) and the `/validate` description update (adds coherence review).
 - Logged migration in `reference/installed-packages.md` as new Updated entries under both NLA Framework and Penny Post sections.
 - Refreshed `reference/system-status.md` timestamp and added submodule-location notes.
 
-**Task B — package-side migration (pending).**
+**Task B — package-side migration (complete, committed):**
+
+- Updated `install/install.md` Prerequisites section to instruct consumers to add this
+  repo as a submodule at `packages/nla-process-helpers/` (HTTPS URL with explicit
+  `git submodule add` command). Rewrote Permissions section to reflect that process
+  helpers needs no pre-approval entries — it has no shell commands, external tools,
+  or write needs, and reads are in-project now.
+- Updated `install/CLAUDE-intent.md` reference line to point at
+  `packages/nla-process-helpers/`.
+- Updated `install/skills-intent.md` — all 8 path references across the 4 skill
+  reference implementations changed to `packages/nla-process-helpers/app/`. Reworked
+  the Wrapper Pattern section prose to describe submodule updates rather than sibling
+  repo pulls.
+- Updated `README.md` "For NLA Creators" section — setup steps now show the
+  `git submodule add` command and all four wrapper examples use `packages/…` paths.
+  Added a top-level `packages/` entry to the "What's Inside" directory tree (surfaced
+  during architecture review).
+- Updated `app/overview.md` "Second NLA Extension" section — prose and diagram now
+  show consumer NLAs installing this package as a submodule. Updated "For Humans"
+  section — install/update steps now use `git submodule add` and `/update`.
+- Ran architecture review (`reference/sessions/2026-04-16-architecture-review.md`).
+  One fix caught during review (README directory tree); applied in-session so it
+  landed in the same Task B commit. Overall: migration is architecturally clean,
+  consumer-side and package-side are consistent.
 
 ## Decisions Made
 
@@ -58,7 +81,12 @@ wrapper) and the `/validate` description update (adds coherence review).
 
 ## What Didn't Work
 
-*(None so far.)*
+No dead ends. The two-task split worked well — Task A's validation caught a few
+stale-doc issues (session-checkpoint missing from tables, validate description
+needing a broaden, system-status.md skills list out of date) that would have been
+harder to spot in a single-commit mega-change. Task B's architecture review
+surfaced one stale README tree that slipped through structural validation because
+no file reference was broken — the tree was just incomplete.
 
 ## Friction Log Entries Processed
 
@@ -70,4 +98,23 @@ wrapper) and the `/validate` description update (adds coherence review).
 
 ## State at Close
 
-*(Pending.)*
+Migration to the `packages/` submodule convention is complete — both consumer-side
+(this project's own dependency references) and package-side (the contract this
+package exposes to external NLAs) are current with the 2026-04-15 framework update.
+
+Also picked up in the same session:
+- New `/session-checkpoint` framework skill — wrapper created, registered in CLAUDE.md
+  and related tables
+- `/validate` and `/export` description refreshes propagated to wrappers and the
+  CLAUDE.md skills table
+
+Two commits: Task A (`3f5d3cc`) for consumer side, Task B for package side.
+
+No pending work. Friction log and feedback log both empty.
+
+**Potential follow-ups (not blocking):**
+- Consider adding `install/update-notes.md` to this package so future consumers get
+  narrative guidance when they `/update` across breaking changes. Framework has this
+  pattern; extension packages haven't adopted it.
+- Consider a `.gitattributes` with `export-ignore` for `reference/` if/when anyone
+  exports a plugin using this project — not relevant until then.

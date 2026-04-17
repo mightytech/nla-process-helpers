@@ -27,17 +27,18 @@ A technique's job is done when its purpose is served — when the threads are re
 
 ### The Second NLA Extension
 
-The penny post was the first NLA extension — a capability that other NLAs install and use from within their own sessions. Process helpers is the second, following the same pattern: thin wrappers in the NLA point to skill logic in `../nla-process-helpers/`.
+The penny post was the first NLA extension — a capability that other NLAs install and use from within their own sessions. Process helpers is the second, following the same pattern: thin wrappers in the NLA point to skill logic in the `packages/nla-process-helpers/` submodule.
 
 ```
 your-nla/
   .claude/skills/
-    unpack/SKILL.md               → ../nla-process-helpers/app/unpack.md
-    brainstorm-cluster/SKILL.md   → ../nla-process-helpers/app/brainstorm-cluster.md
-    steelman/SKILL.md             → ../nla-process-helpers/app/steelman.md
-    devils-advocate/SKILL.md      → ../nla-process-helpers/app/devils-advocate.md
-../nla-framework/                  # Foundation
-../nla-process-helpers/            # Extension (facilitation techniques)
+    unpack/SKILL.md               → packages/nla-process-helpers/app/unpack.md
+    brainstorm-cluster/SKILL.md   → packages/nla-process-helpers/app/brainstorm-cluster.md
+    steelman/SKILL.md             → packages/nla-process-helpers/app/steelman.md
+    devils-advocate/SKILL.md      → packages/nla-process-helpers/app/devils-advocate.md
+  packages/
+    nla-framework/                ← Foundation (submodule)
+    nla-process-helpers/          ← Extension (submodule — facilitation techniques)
 ```
 
 ---
@@ -92,12 +93,11 @@ See `install/install.md` for the full manifest.
 ## For Humans
 
 **To install process helpers for your NLA:**
-1. Clone this repo as a sibling to your NLA: `../nla-process-helpers/`
-2. Add skill wrappers to your NLA's `.claude/skills/` (see `install/skills-intent.md` for details)
-3. Add the skills to your CLAUDE.md skills table
+1. Add this repo as a submodule: `git submodule add --depth 1 https://github.com/mightytech/nla-process-helpers.git packages/nla-process-helpers`
+2. Run `/install` from your NLA — it detects the package and wires up the skill wrappers and CLAUDE.md entries automatically. (For manual setup, see `install/skills-intent.md`.)
 
 **To keep up with upstream:**
-- `git pull` the process helpers repo for technique updates
+- Run `/update` from your NLA — it advances the submodule and re-applies any intent changes.
 
 ---
 

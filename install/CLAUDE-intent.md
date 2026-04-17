@@ -31,7 +31,7 @@ helpers extension. Specifically:
   or replace whatever mode is active — thinking, maintenance, domain work. It adds
   conversation structure on top.
 
-- **The process helpers repo is at `../nla-process-helpers/`.**
+- **The process helpers package is installed as a git submodule at `packages/nla-process-helpers/`.**
 
 ## Skills to Reference
 

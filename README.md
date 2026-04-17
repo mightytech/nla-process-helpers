@@ -34,23 +34,26 @@ Phase skills like `/think` and `/debrief` define *when* in the work lifecycle �
 
 ### Setup
 
-1. Clone this repo as a sibling to your NLA: `../nla-process-helpers/`
-2. From your NLA, run `/install` and point it at `../nla-process-helpers/`
+1. Add this repo as a submodule in your NLA:
+   ```
+   git submodule add --depth 1 https://github.com/mightytech/nla-process-helpers.git packages/nla-process-helpers
+   ```
+2. From your NLA, run `/install` to wire up the skill wrappers and CLAUDE.md entries.
 
 Or add skill wrappers manually (see `install/skills-intent.md` for details):
 
 ```
 # .claude/skills/unpack/SKILL.md
-Read and follow `../nla-process-helpers/app/unpack.md`.
+Read and follow `packages/nla-process-helpers/app/unpack.md`.
 
 # .claude/skills/brainstorm-cluster/SKILL.md
-Read and follow `../nla-process-helpers/app/brainstorm-cluster.md`.
+Read and follow `packages/nla-process-helpers/app/brainstorm-cluster.md`.
 
 # .claude/skills/steelman/SKILL.md
-Read and follow `../nla-process-helpers/app/steelman.md`.
+Read and follow `packages/nla-process-helpers/app/steelman.md`.
 
 # .claude/skills/devils-advocate/SKILL.md
-Read and follow `../nla-process-helpers/app/devils-advocate.md`.
+Read and follow `packages/nla-process-helpers/app/devils-advocate.md`.
 ```
 
 3. Add the skills to your NLA's CLAUDE.md skills table
@@ -85,6 +88,9 @@ The skill runs in your NLA's session with full project context. It layers on wha
 │   ├── install.md                   # Orchestrator — what this package needs
 │   ├── CLAUDE-intent.md             # Intent for NLA's CLAUDE.md
 │   └── skills-intent.md            # Intent for skill wrappers
+├── packages/                        # Git submodule dependencies
+│   ├── nla-framework/               # NLA Framework (submodule)
+│   └── nla-penny-post/              # Penny post extension (submodule)
 ├── reference/                       # Maintenance records
 │   ├── design-rationale.md          # Why the system is built this way
 │   ├── friction-log.md              # Learning journal (active entries)
