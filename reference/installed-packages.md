@@ -42,11 +42,11 @@ thin wrappers in `.claude/skills/` delegating to `packages/nla-framework/core/sk
 
 ### Updated 2026-04-16
 
-**Package state:** a754ae3
+**Package state:** a754ae3 (tag `v0.0.3`)
 
 | Intent File | What Changed | Changes Made |
 |-------------|-------------|--------------|
-| install.md, CLAUDE-intent.md, structure-intent.md, package-intent.md, skills-intent.md | `../nla-framework/` sibling convention replaced with `packages/nla-framework/` git submodule; `Read(../nla-framework/**)` permission retired (reads now in-project) | Added framework as git submodule at `packages/nla-framework/` (HTTPS URL). Updated all 13 framework thin wrappers to point at `packages/nla-framework/core/skills/`. Removed absolute `Read(.../nla-framework/**)` entry from `.claude/settings.local.json`. |
+| install.md, CLAUDE-intent.md, structure-intent.md, package-intent.md, skills-intent.md | `../nla-framework/` sibling convention replaced with `packages/nla-framework/` git submodule; `Read(../nla-framework/**)` permission retired (reads now in-project) | Added framework as git submodule at `packages/nla-framework/` (HTTPS URL), pinned at tag `v0.0.3`. Updated all 13 framework thin wrappers to point at `packages/nla-framework/core/skills/`. Removed absolute `Read(.../nla-framework/**)` entry from `.claude/settings.local.json`. |
 | skills-intent.md | New `/session-checkpoint` skill; `/validate` description adds coherence review; `/export` description reflects view-source plugin model | Created `.claude/skills/session-checkpoint/SKILL.md` wrapper; updated `/validate` and `/export` descriptions. |
 
 **Downstream updates:** CLAUDE.md (`/session-checkpoint` added to skills table; Environment line and Key Files table updated to `packages/…`); README.md (framework links, prerequisites, and footer updated); `app/overview.md` top-of-doc framework link; `app/config-spec.md` defaults updated to `packages/…`.
@@ -74,13 +74,13 @@ Package manifest predates the Permissions convention — no permission entries d
 
 ### Updated 2026-04-16
 
-**Package state:** 6a5bba1
+**Package state:** 1ef501e (tag `v0.0.1`)
 
 | Intent File | What Changed | Changes Made |
 |-------------|-------------|--------------|
-| install.md, CLAUDE-intent.md, skills-intent.md | `../nla-penny-post/` sibling convention replaced with `packages/nla-penny-post/` git submodule | Added penny post as git submodule at `packages/nla-penny-post/` (HTTPS URL). Updated `check-feedback` and `write-letter` thin wrappers to point at `packages/nla-penny-post/app/`. Removed absolute `Read(.../nla-penny-post/**)` entry from `.claude/settings.local.json`. |
+| install.md, CLAUDE-intent.md, skills-intent.md | `../nla-penny-post/` sibling convention replaced with `packages/nla-penny-post/` git submodule | Added penny post as git submodule at `packages/nla-penny-post/` (HTTPS URL), pinned at tag `v0.0.1`. Updated `check-feedback` and `write-letter` thin wrappers to point at `packages/nla-penny-post/app/`. Removed absolute `Read(.../nla-penny-post/**)` entry from `.claude/settings.local.json`. |
 
-**Notes:** Phase 2 of the framework's `packages/` migration — applied alongside the framework update on the same date.
+**Notes:** Phase 2 of the framework's `packages/` migration — applied alongside the framework update on the same date. Submodule pinned at the tagged release `v0.0.1` rather than main HEAD.
 
 ---
 
